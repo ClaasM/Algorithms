@@ -1,2 +1,2 @@
-# ConPra
-Algorithms for programming contests SS16
+# Algorithms
+A comprehensive and exhaustive resource for algorithms in all languages and versions.
