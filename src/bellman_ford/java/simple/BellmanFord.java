@@ -5,20 +5,20 @@ import java.util.Arrays;
 /**
  * Created by claas on 7/11/2016.
  * Used to perform the Bellman Ford Algorithm using adjacency matrices.
- * For a faster implementation, see @see ../fast/BellmanFord.java (using adjacency Lists)
+ * For a faster implementation, see @see ../fast/bellmanFord.java (using adjacency Lists)
  */
 public class BellmanFord {
     /**
      * Implementation of Bellman-Ford using adjacency matrix.
      * This returns an array containing the length of the shortest path from the start node to each other node.
      * It is only guaranteed to return correct results if there are no negative cycles in the graph. Negative edges or positive cycles are fine.
-     * This has a runtime of O(|V|^3) (|V| = number of Nodes), for a faster implementation see @see ../fast/BellmanFord.java (using adjacency Lists)
+     * This has a runtime of O(|V|^3) (|V| = number of Nodes), for a faster implementation see @see ../fast/bellmanFord.java (using adjacency Lists)
      * @param graph an adjacency-matrix-representation of the graph where (x,y) is the weight of the edge or 0 if there is no edge.
      * @param start the node to start from.
      */
-    public static int[] BellmanFord(int[][] graph, int start){
+    public static int[] bellmanFord(int[][] graph, int start){
 
-        //TODO split this into a version that returns the shortest distances to all nodes and one that returns the shortest path to one node (aka. predecessor[])
+        //TODO split this into a version that returns the shortest distances to all nodes and one that returns the shortest path to one node (aka. predecessor[]), (also for Dijkstra)
 
         //This is used to save the shortest path (the int in distance[i] is the predecessor of i)
         int[] predecessor = new int[graph.length];
@@ -29,6 +29,8 @@ public class BellmanFord {
         //Initializing with a distance of "Infinity"
         Arrays.fill(distance, Integer.MAX_VALUE);
 
+        //The distance from the start node to itself is of course 0
+        distance[start] = 0;
 
         //Relax n-1 times since the shortest path in a graph with no negative cycles crosses at most n-1 nodes
         for (int i = 1; i < distance.length - 1; i++) {

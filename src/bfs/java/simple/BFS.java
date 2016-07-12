@@ -1,6 +1,5 @@
 package bfs.java.simple;
 
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -18,7 +17,7 @@ public class BFS {
      * @param graph an adjacency-matrix-representation of the graph where (x,y) is true if the the there is an edge between nodes x and y.
      * @param start the node to start from.
      */
-    public static void DFS(boolean[][] graph, int start){
+    public static void bfs(boolean[][] graph, int start){
         //A Queue to manage the nodes that have yet to be visited
         Queue<Integer> queue = new PriorityQueue<>();
         //Adding the node to start from
