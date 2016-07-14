@@ -14,8 +14,7 @@ public class Prim {
     /**
      * Implementation of Prim using adjacency matrix.
      * This returns an array containing the parent node for every node in the MST of the graph.
-     * This has a runtime of O(|V|^2) (|V| = number of Nodes), for a faster implementation see @see ../fast/prim.java (using adjacency Lists)
-     *
+     * This has a runtime of O(|V|^2) (|V| = number of Nodes), for a faster implementation see @see ../fast/Prim.java (using adjacency Lists)
      * @param graph an adjacency-matrix-representation of the graph where (x,y) is the weight of the edge or 0 if there is no edge.
      */
     public static int[] prim(int[][] graph) {
