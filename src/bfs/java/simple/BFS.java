@@ -30,7 +30,7 @@ public class BFS {
         while(!queue.isEmpty()) {
             int node = queue.remove();
             //...for all neighboring nodes that haven't been visited yet....
-            for (int i = 0; i < graph[node].length; i++) {
+            for (int i = 1; i < graph[node].length; i++) {
                 if(graph[node][i] && !visited[i]){
                     //Visit it and add it to the queue
                     visited[i] = true;
