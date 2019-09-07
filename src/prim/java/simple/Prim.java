@@ -1,6 +1,5 @@
 package prim.java.simple;
 
-
 import java.util.Arrays;
 
 import static javafx.scene.input.KeyCode.V;
