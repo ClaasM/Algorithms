@@ -13,7 +13,7 @@ class Test {
                 {0, 0, 0, 0, 0, 0},
         };
 
-        // Should be [0, 5, 2, 9, 7, 8]
+        // Should be [0, 3, 1, 5, 4, 5]
         System.out.println(Arrays.toString(Dijkstra.dijkstra(graph, 0)));
     }
 }

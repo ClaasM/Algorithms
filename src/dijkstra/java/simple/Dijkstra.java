@@ -51,6 +51,8 @@ public class Dijkstra {
                 }
             }
 
+            System.out.println("Visiting node " + shortestDistance + " with current distance " + shortestDistance);
+
             if (shortestIndex == -1) {
                 // There was no node not yet visited --> We are done
                 return distances;
@@ -62,10 +64,14 @@ public class Dijkstra {
                 if (graph[shortestIndex][i] != 0 && distances[i] > distances[shortestIndex] + graph[shortestIndex][i]) {
                     //...Save this path as new shortest path.
                     distances[i] = distances[shortestIndex] + graph[shortestIndex][i];
+                    System.out.println("Updating distance of node " + i + " to " + distances[i]);
                 }
             }
             // Lastly, note that we are finished with this node.
             visited[shortestIndex] = true;
+            System.out.println("Visited nodes: " + Arrays.toString(visited));
+            System.out.println("Currently lowest distances: " + Arrays.toString(distances));
+
         }
     }
 }
