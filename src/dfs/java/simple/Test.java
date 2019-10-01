@@ -1,4 +1,5 @@
-package iterative_deepening_dfs.java.simple;
+package dfs.java.simple;
+
 
 // Subclass with a convenient constructor.
 class TestNode extends Node {
@@ -16,16 +17,16 @@ class Test {
                         new TestNode(3, new Node[]{}),
                         new TestNode(4, new Node[]{})
                 }), new TestNode(2, new Node[]{
-                        new TestNode(5, new Node[]{}),
-                        new TestNode(6, new Node[]{})
-                })
+                new TestNode(5, new Node[]{}),
+                new TestNode(6, new Node[]{})
+        })
         });
 
         // Bigger graph specifically for this algorithm
         // TODO
 
         // Should be 6
-        System.out.println(IterativeDeepeningDFS.iterativeDeepeningDFS(start, 6).value);
+        System.out.println(DFS.dfs(start, 6).value);
     }
 }
 

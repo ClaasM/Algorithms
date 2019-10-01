@@ -1,32 +1,44 @@
 package dfs.java.simple;
 
 /**
- * Created by ClaasM on 7/9/2016.
- * Used to perform Depth-First-Search (dfs) using adjacency matrices.
- * For a faster implementation, see @see ../fast/dfs.java (using adjacency Lists)
+ * Created by claas on 7/17/2016.
+ * Used to perform the Depth-First Search (DFS) Algorithm to find the shortest path from a start to a target node.
  */
 public class DFS {
-    /**
-     * Recursive implementation of Depth-First-Search using adjacency matrix.
-     * This returns nothing (yet), it is meant to be a template for whatever you want to do with it,
-     * e.g. finding connected components in a graph.
-     * This has a runtime of O(|V|^2) (|V| = number of Nodes), for a faster implementation see @see ../fast/dfs.java (using adjacency Lists)
-     * @param graph an adjacency-matrix-representation of the graph where (x,y) is true if the the there is an edge between nodes x and y.
-     * @param current the node to start from.
-     * @param visited an array denoting whether a node has been visited or not.
-     */
-    public static void dfs(boolean[][] graph, int current, boolean[] visited){
-        //Label the current node as visited
-            visited[current] = true;
-        //For each node...
-        for (int i = 0; i < graph[current].length; i++) {
-            //...if there is an edge between the node and current node and the node has not yet been visited...
-            if(graph[current][i] && !visited[i]){
-                //...recursively call dfs with i being the next node.
-                dfs(graph,i,visited);
-            }
 
+    /**
+     * Implementation of DFS (depth-first search).
+     * Given a start node, this returns the node in the tree below the start node with the target value (or null if it doesn't exist)
+     * Runs in O(n), where n is the number of nodes in the tree, or O(b^d), where b is the branching factor and d is the depth.
+     *
+     * @param start  the node to start the search from
+     * @param target the value to search for
+     * @return The node containing the target value or null if it doesn't exist.
+     */
+    public static Node dfs(Node start, int target) {
+        System.out.println("Visiting Node " + start.value);
+        if (start.value == target) {
+            // We have found the goal node we we're searching for
+            System.out.println("Found the node we're looking for!");
+            return start;
         }
 
+        // Recurse with all children
+        for (int i = 0; i < start.children.length; i++) {
+            Node result = dfs(start.children[i], target);
+            if (result != null) {
+                // We've found the goal node while going down that child
+                return result;
+            }
+        }
+
+        // We've gone through all children and not found the goal node
+        return null;
     }
+}
+
+// used to store a tree datastructure
+class Node {
+    Node[] children;
+    int value;
 }

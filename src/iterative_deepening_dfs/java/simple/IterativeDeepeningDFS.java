@@ -8,12 +8,12 @@ public class IterativeDeepeningDFS {
     private static boolean bottomReached = false; // Variable to keep track if we have reached the bottom of the tree
 
     /**
-     * TODO
-     * TODO This runs in O(n) where n is the number of edges of the polygon.
-     *
+     * Implementation of iterative deepening DFS (depth-first search).
+     * Given a start node, this returns the node in the tree below the start node with the target value (or null if it doesn't exist)
+     * Runs in O(n), where n is the number of nodes in the tree, or O(b^d), where b is the branching factor and d is the depth.
      * @param start  the node to start the search from
      * @param target the value to search for
-     * @return TODO
+     * @return The node containing the target value or null if it doesn't exist.
      */
     public static Node iterativeDeepeningDFS(Node start, int target) {
         // Start by doing DFS with a depth of 1, keep doubling depth until we reach the "bottom" of the tree or find the node we're searching for
@@ -26,19 +26,13 @@ public class IterativeDeepeningDFS {
                 return result;
             }
 
-            //if (bottomReached) {
-            //    // We haven't found the node and there were no more nodes that still have children to explore at a higher depth
-            //    return null;
-            //}
-
             // We haven't found the goal node, but there are still deeper nodes to search through
             depth *= 2;
             System.out.println("Increasing depth to " + depth);
         }
 
-        // TODO decide on one comment
-        // We haven't found the node and there were no more nodes that still have children to explore at a higher depth
-        // There are no more nodes that still have children at higher depths, we've gone through the whole tree.
+        // Bottom reached is true.
+        // We haven't found the node and there were no more nodes that still have children to explore at a higher depth.
         return null;
     }
 
