@@ -33,6 +33,7 @@ public class DFS {
         }
 
         // We've gone through all children and not found the goal node
+        System.out.println("Went through all children of " + start.value + ", returning to it's parent.");
         return null;
     }
 }

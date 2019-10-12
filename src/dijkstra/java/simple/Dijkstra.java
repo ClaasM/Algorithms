@@ -1,10 +1,6 @@
 package dijkstra.java.simple;
 
-import javafx.util.Pair;
-
 import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * Created by claas on 7/11/2016.
@@ -28,14 +24,11 @@ public class Dijkstra {
         int[] distances = new int[graph.length];
         //Initializing with a distance of "Infinity"
         Arrays.fill(distances, Integer.MAX_VALUE);
-
-        //This contains whether a node was already visited
-        boolean[] visited = new boolean[graph.length];
-
         //The distance from the start node to itself is of course 0
         distances[start] = 0;
 
-        //Wether we have already visited a node
+        //This contains whether a node was already visited
+        boolean[] visited = new boolean[graph.length];
 
         //While there are nodes left to visit...
         while (true) {
@@ -58,7 +51,7 @@ public class Dijkstra {
                 return distances;
             }
 
-            //...then, for all neighboring nodes that haven't been visited yet....
+            //...then, for all neighboring nodes....
             for (int i = 0; i < graph[shortestIndex].length; i++) {
                 //...if the path over this edge is shorter...
                 if (graph[shortestIndex][i] != 0 && distances[i] > distances[shortestIndex] + graph[shortestIndex][i]) {
