@@ -8,12 +8,13 @@ import java.util.Arrays;
  */
 public class AStar {
     /**
-     * TODO
-     * TODO This runs in O(n) where n is the number of edges of the polygon.
-     *
+     * Finds the shortest distance between two nodes using the A-star algorithm
      * @param graph an adjacency-matrix-representation of the graph where (x,y) is the weight of the edge or 0 if there is no edge.
+     * @param heuristic an estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance
+     * @param start the node to start from.
+     * @param goal the node we're searching for
      * @return The shortest distance to the goal node. Can be easily modified to return the path.
-     */
+     * */
     public static double aStar(int[][] graph, double[][] heuristic, int start, int goal) {
 
         //This contains the distances from the start node to all other nodes

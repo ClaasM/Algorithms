@@ -40,8 +40,8 @@ public class BFS {
             //...for all neighboring nodes that haven't been visited yet....
             for (int i = 1; i < graph[node].length; i++) {
                 if (graph[node][i] && !visited[i]) {
-                    // TODO do whatever you want to do with the node here.
-                    //Visit it, set the distance and add it to the queue
+                    // Do whatever you want to do with the node here.
+                    // Visit it, set the distance and add it to the queue
                     visited[i] = true;
                     distances[i] = distances[node] + 1;
                     queue.add(i);
