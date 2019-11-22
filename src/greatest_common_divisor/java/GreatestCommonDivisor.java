@@ -3,7 +3,7 @@ package greatest_common_divisor.java;
 /**
  * Created by claas on 7/17/2016.
  * Used to perform the Euclidean Algorithm to find the greatest common divisor (gcd) of two numbers.
- * For more than two numbers, e.g. three, you can box it like this: gcd(a,gcd(b,c)) etc.
+ * For more than two numbers, e.g. three, you can box it like this: gcd(a,gcd(b,greatest_common_divisor.c)) etc.
  */
 public class GreatestCommonDivisor {
     /**

@@ -18,7 +18,7 @@ public class IterativeDeepeningAStar {
     public static double iterativeDeepeningAStar(int[][] tree, double[][] heuristic, int start, int goal) {
         double threshold = heuristic[start][goal];
         while (true) {
-            System.out.println("Iteration with threshold: " + threshold);
+            System.out.printf("Iteration with threshold: %.2f\n", threshold);
             double distance = iterativeDeepeningAStar(tree, heuristic, start, goal, 0, threshold);
             if (distance == Double.MAX_VALUE) {
                 // Node not found and no more nodes to visit
@@ -56,7 +56,7 @@ public class IterativeDeepeningAStar {
 
         double estimate = distance + heuristic[node][goal];
         if (estimate > threshold) {
-            System.out.println("Breached threshold with heuristic: " + estimate);
+            System.out.printf("Breached threshold with heuristic: %.2f\n", estimate);
             return estimate;
         }
 
