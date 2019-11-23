@@ -1,17 +1,15 @@
 #include <stdio.h>
-int hcf(int n1, int n2);
-int bla()
-{
-   int n1, n2;
-   printf("Enter two positive integers: ");
-   scanf("%d %d", &n1, &n2);
-   printf("G.C.D of %d and %d is %d.", n1, n2, hcf(n1,n2));
-   return 0;
+
+/*
+* Recursive implementation to find the gcd (greatest common divisor) of two integers using the euclidean algorithm.
+* For more than two numbers, e.g. three, you can box it like this: gcd(a,gcd(b,greatest_common_divisor.c)) etc.
+* This runs in O(log(n)) where n is the maximum of a and b.
+* @param a the first integer
+* @param b the second integer
+* @return the greatest common divisor (gcd) of the two integers.
+*/
+int gcd(int a, int b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
 }
-int hcf(int n1, int n2)
-{
-    if (n2 != 0)
-       return hcf(n2, n1%n2);
-    else 
-       return n1;
-}
+
