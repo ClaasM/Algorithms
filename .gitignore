@@ -15,5 +15,9 @@ hs_err_pid*
 #idea files
 .idea
 
-# GCC compilation output
+# C specific
 *.out
+
+# R specific
+.Rproj.user
+*.Rproj
