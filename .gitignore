@@ -21,3 +21,5 @@ hs_err_pid*
 # R specific
 .Rproj.user
 *.Rproj
+*.RData
+*.Rhistory
