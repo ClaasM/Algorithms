@@ -20,7 +20,7 @@ const pointInPolygon = function (polygon, point) {
         //If a line from the point into infinity crosses this edge
         if (((polygon[i][1] > point[1]) !== (polygon[j][1] > point[1])) // One point needs to be above, one below our y coordinate
             // ...and the edge doesn't cross our Y corrdinate before our x coordinate (but between our x coordinate and infinity)
-            && (point[0] < ((polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1]) | 0) + polygon[i][0])) {
+            && (point[0] < ((polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1]) + polygon[i][0]))) {
             // Invert odd
             odd = !odd;
         }

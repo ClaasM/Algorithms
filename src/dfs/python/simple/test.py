@@ -1,6 +1,6 @@
 from dfs import dfs
 
-# Smaller graph used for dijkstra
+# Smaller graph used for dfs
 start = {
     "value": 0, "children": [
         {"value": 1, "children": [

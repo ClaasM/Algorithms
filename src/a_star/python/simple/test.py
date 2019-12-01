@@ -2,7 +2,6 @@ import math
 
 from a_star import a_star
 
-# Smaller graph used for dijkstra
 small_graph_distances = [
     [0, 3, 4, 0, 0, 0],
     [0, 0, 0, 6, 10, 0],
