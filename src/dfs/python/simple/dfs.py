@@ -1,20 +1,12 @@
-"""
-Created by claas on 7/17/2016.
-Used to perform the Depth-First Search (DFS) Algorithm to find the shortest path from a start to a target node.
- """
-
-"""
-Implementation of DFS (depth-first search).
-Given a start node, this returns the node in the tree below the start node with the target value (or null if it doesn't exist)
-Runs in O(n), where n is the number of nodes in the tree, or O(b^d), where b is the branching factor and d is the depth.
- *
-@param start  the node to start the search from
-@param target the value to search for
-@return The node containing the target value or null if it doesn't exist.
-"""
-
-
 def dfs(start, target):
+    """
+    Implementation of DFS (depth-first search) algorithm to find the shortest path from a start to a target node..
+    Given a start node, this returns the node in the tree below the start node with the target value (or null if it doesn't exist)
+    Runs in O(n), where n is the number of nodes in the tree, or O(b^d), where b is the branching factor and d is the depth.
+    :param start:  the node to start the search from
+    :param target: the value to search for
+    :return: The node containing the target value or null if it doesn't exist.
+    """
     print("Visiting Node " + str(start["value"]))
     if start["value"] == target:
         # We have found the goal node we we're searching for

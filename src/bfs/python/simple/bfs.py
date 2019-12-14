@@ -1,21 +1,13 @@
-"""
-Created by claas on 7/10/2016.
-Used to perform Breadth-First-Search (BFS) using adjacency matrices.
-For a faster implementation, see @see ../fast/BFS.java (using adjacency Lists)
-"""
-
-"""
-Implementation of Breadth-First-Search using adjacency matrix.
-This returns nothing (yet), it is meant to be a template for whatever you want to do with it,
-e.g. finding the shortest path in a unweighted graph.
-This has a runtime of O(|V|^2) (|V| = number of Nodes), for a faster implementation see @see ../fast/BFS.java (using adjacency Lists)
-@param graph an adjacency-matrix-representation of the graph where (x,y) is True if the the there is an edge between nodes x and y.
-@param start the node to start from.
-@return Array array containing the shortest distances from the given start node to each other node
- """
-
-
 def bfs(graph, start):
+    """
+    Implementation of Breadth-First-Search (BFS) using adjacency matrix.
+    This returns nothing (yet), it is meant to be a template for whatever you want to do with it,
+    e.g. finding the shortest path in a unweighted graph.
+    This has a runtime of O(|V|^2) (|V| = number of Nodes), for a faster implementation see @see ../fast/BFS.java (using adjacency Lists)
+    :param graph: an adjacency-matrix-representation of the graph where (x,y) is True if the the there is an edge between nodes x and y.
+    :param start: the node to start from.
+    :return: Array array containing the shortest distances from the given start node to each other node
+    """
     # A Queue to manage the nodes that have yet to be visited, intialized with the start node
     queue = [start]
     # A boolean array indicating whether we have already visited a node
@@ -41,7 +33,8 @@ def bfs(graph, start):
                 visited[i] = True
                 distances[i] = distances[node] + 1
                 queue.append(i)
-                print("Visiting node " + str(i) + ", setting its distance to " + str(distances[i]) + " and adding it to the queue")
+                print("Visiting node " + str(i) + ", setting its distance to " + str(
+                    distances[i]) + " and adding it to the queue")
 
     print("No more nodes in the queue. Distances: " + str(distances))
     return distances

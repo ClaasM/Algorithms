@@ -1,20 +1,13 @@
-"""
-Created by claas on 7/17/2016.
-Used to perform the Iterative Deepening A* Algorithm to find the shortest path from a start to a target node.
- """
-
-"""
-Performs iterative deepening A Star (A*).
-Can be modified to handle graphs by keeping track of already visited nodes.
-@param tree      An adjacency-matrix-representation of the tree where (x,y) is the weight of the edge or 0 if there is no edge.
-@param heuristic An estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance.
-@param start      The node to start from.
-@param goal      The node we're searching for.
-@return number shortest distance to the goal node. Can be easily modified to return the path.
- """
-
-
 def iterative_deepening_a_star(tree, heuristic, start, goal):
+    """
+    Performs the iterative deepening A Star (A*) algorithm to find the shortest path from a start to a target node.
+    Can be modified to handle graphs by keeping track of already visited nodes.
+    :param tree:      An adjacency-matrix-representation of the tree where (x,y) is the weight of the edge or 0 if there is no edge.
+    :param heuristic: An estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance.
+    :param start:      The node to start from.
+    :param goal:      The node we're searching for.
+    :return: number shortest distance to the goal node. Can be easily modified to return the path.
+    """
     threshold = heuristic[start][goal]
     while True:
         print("Iteration with threshold: " + str(threshold))
@@ -31,20 +24,18 @@ def iterative_deepening_a_star(tree, heuristic, start, goal):
             threshold = distance
 
 
-"""
-Performs DFS up to a depth where a threshold is reached (as opposed to interative-deepening DFS which stops at a fixed depth).
-Can be modified to handle graphs by keeping track of already visited nodes.
-@param tree      An adjacency-matrix-representation of the tree where (x,y) is the weight of the edge or 0 if there is no edge.
-@param heuristic An estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance.
-@param node      The node to continue from.
-@param goal      The node we're searching for.
-@param distance  Distance from start node to current node.
-@param threshold Until which distance to search in this iteration.
-@return number shortest distance to the goal node. Can be easily modified to return the path.
- """
-
-
 def iterative_deepening_a_star_rec(tree, heuristic, node, goal, distance, threshold):
+    """
+    Performs DFS up to a depth where a threshold is reached (as opposed to interative-deepening DFS which stops at a fixed depth).
+    Can be modified to handle graphs by keeping track of already visited nodes.
+    :param tree:      An adjacency-matrix-representation of the tree where (x,y) is the weight of the edge or 0 if there is no edge.
+    :param heuristic: An estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance.
+    :param node:      The node to continue from.
+    :param goal:      The node we're searching for.
+    :param distance:  Distance from start node to current node.
+    :param threshold: Until which distance to search in this iteration.
+    :return: number shortest distance to the goal node. Can be easily modified to return the path.
+     """
     print("Visiting Node " + str(node))
 
     if node == goal:
