@@ -1,11 +1,5 @@
 /**
- * Created by claas on 7/17/2016.
- * Used to perform the Raycasting Algorithm to find out whether a point is in a given polygon.
- * @class
- */
-
-/**
- * Performs the even-odd-rule Algorithm to find out whether a point is in a given polygon.
+ * Performs the even-odd-rule Algorithm (a raycasting algorithm) to find out whether a point is in a given polygon.
  * This runs in O(n) where n is the number of edges of the polygon.
  *
  * @param {Array} polygon an array representation of the polygon where polygon[i][0] is the x Value of the i-th point and polygon[i][1] is the y Value.

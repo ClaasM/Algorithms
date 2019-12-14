@@ -1,11 +1,5 @@
 /**
- * Created by claas on 7/11/2016.
- * Used to perform the dijkstra Algorithm using adjacency matrices.
- * For a faster implementation, see @see ../fast/Dijkstra.java (using adjacency Lists)
- */
-
-/**
- * Implementation of dijkstra using adjacency matrix.
+ * Implementation of Dijkstra Algorithm using adjacency matrix.
  * This returns an array containing the length of the shortest path from the start node to each other node.
  * It is only guaranteed to return correct results if there are no negative edges in the graph. Positive cycles are fine.
  * This has a runtime of O(|V|^2) (|V| = number of Nodes), for a faster implementation see @see ../fast/Dijkstra.java (using adjacency lists)

@@ -1,12 +1,7 @@
-/**
- * Created by claas on 7/17/2016.
- * Used to perform the Iterative Deepening Depth-First Search (DFS) Algorithm to find the shortest path from a start to a target node.
- */
-
 var bottomReached = false; // Variable to keep track if we have reached the bottom of the tree
 
 /**
- * Implementation of iterative deepening DFS (depth-first search).
+ * Implementation of iterative deepening DFS (depth-first search) Algorithm to find the shortest path from a start to a target node..
  * Given a start node, this returns the node in the tree below the start node with the target value (or null if it doesn't exist)
  * Runs in O(n), where n is the number of nodes in the tree, or O(b^d), where b is the branching factor and d is the depth.
  * @param start  the node to start the search from

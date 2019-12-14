@@ -1,10 +1,5 @@
 /**
- * Created by claas on 7/17/2016.
- * Used to perform the Iterative Deepening A* Algorithm to find the shortest path from a start to a target node.
- */
-
-/**
- * Performs iterative deepening A Star (A*).
+ * Performs iterative deepening A Star (A*) Algorithm to find the shortest path from a start to a target node..
  * Can be modified to handle graphs by keeping track of already visited nodes.
  *
  * @param tree      An adjacency-matrix-representation of the tree where (x,y) is the weight of the edge or 0 if there is no edge.
