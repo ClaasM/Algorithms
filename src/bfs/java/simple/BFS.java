@@ -5,7 +5,6 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Created by claas on 7/10/2016.
  * Used to perform Breadth-First-Search (BFS) using adjacency matrices.
  * For a faster implementation, see @see ../fast/BFS.java (using adjacency Lists)
  */

@@ -3,7 +3,6 @@ package edmonds_karp.java.simple;
 import java.util.*;
 
 /**
- * Created by claas on 7/14/2016.
  * Used to perform the Edmonds-Karp Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/EdmondsKarp.java (using adjacency Lists)
  */

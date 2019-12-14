@@ -3,7 +3,6 @@ package dijkstra.java.simple;
 import java.util.Arrays;
 
 /**
- * Created by claas on 7/11/2016.
  * Used to perform the dijkstra Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/Dijkstra.java (using adjacency Lists)
  */

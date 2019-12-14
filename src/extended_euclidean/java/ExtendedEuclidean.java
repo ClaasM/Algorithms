@@ -1,7 +1,6 @@
 package extended_euclidean.java;
 
 /**
- * Created by claas on 7/17/2016.
  * Used to perform the Extended Euclidean Algorithm.
  */
 public class ExtendedEuclidean {

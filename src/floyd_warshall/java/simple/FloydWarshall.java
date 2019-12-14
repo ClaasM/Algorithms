@@ -3,7 +3,6 @@ package floyd_warshall.java.simple;
 import java.util.Arrays;
 
 /**
- * Created by claas on 7/14/2016.
  * Used to perform the Floyd-Warshall Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/FloydWarshall.java (using adjacency Lists)
  */

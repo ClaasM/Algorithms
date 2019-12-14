@@ -4,7 +4,6 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Created by claas on 7/15/2016.
  * Used to find out if a graph represented using adjacency matrices is bipartite.
  * For a faster implementation, see @see ../fast/Bipartite.java (using adjacency Lists)
  */

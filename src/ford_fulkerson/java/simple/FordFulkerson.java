@@ -1,7 +1,6 @@
 package ford_fulkerson.java.simple;
 
 /**
- * Created by claas on 7/14/2016.
  * Used to perform the Ford-Fulkerson Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/FordFulkerson.java (using adjacency Lists)
  */

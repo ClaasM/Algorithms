@@ -5,7 +5,6 @@ import java.util.Arrays;
 import static javafx.scene.input.KeyCode.V;
 
 /**
- * Created by claas on 7/11/2016.
  * Used to perform the Prim Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/Prim.java (using adjacency Lists)
  */

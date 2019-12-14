@@ -1,7 +1,6 @@
 package dfs.java.simple;
 
 /**
- * Created by claas on 7/17/2016.
  * Used to perform the Depth-First Search (DFS) Algorithm to find the shortest path from a start to a target node.
  */
 public class DFS {

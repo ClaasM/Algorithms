@@ -1,7 +1,6 @@
 package dinic.java.simple;
 
 /**
- * Created by claas on 7/14/2016.
  * Used to perform the Dinic Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/Dinic.java (using adjacency Lists)
  */

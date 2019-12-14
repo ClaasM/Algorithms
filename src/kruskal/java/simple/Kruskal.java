@@ -5,7 +5,6 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Created by claas on 7/11/2016.
  * Used to perform the Kruskal Algorithm using adjacency matrices.
  * For a faster implementation, see @see ../fast/Kruskal.java (using adjacency Lists)
  */

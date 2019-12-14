@@ -1,7 +1,6 @@
 package point_in_polygon.java;
 
 /**
- * Created by claas on 7/17/2016.
  * Used to perform the Raycasting Algorithm to find out whether a point is in a given polygon.
  */
 public class PointInPolygon {

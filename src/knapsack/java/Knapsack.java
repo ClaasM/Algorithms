@@ -1,7 +1,6 @@
 package knapsack.java;
 
 /**
- * Created by claas on 7/14/2016.
  * Used to perform the 0-1-Knapsack algorithm with dynamic programming.
  */
 public class Knapsack {

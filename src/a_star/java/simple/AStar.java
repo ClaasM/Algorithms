@@ -3,7 +3,6 @@ package a_star.java.simple;
 import java.util.Arrays;
 
 /**
- * Created by claas on 7/17/2016.
  * Used to perform the A-Star (A*) Algorithm to find the shortest path from a start to a target node.
  */
 public class AStar {

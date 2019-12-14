@@ -1,7 +1,6 @@
 package chinese_remainder_theorem.java;
 
 /**
- * Created by claas on 7/17/2016.
  * Used to perform the Chinese-Remainder-Theorem (crt) Algorithm using the extended euclidean algorithm.
  */
 public class ChineseRemainderTheorem {

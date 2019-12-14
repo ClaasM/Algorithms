@@ -1,7 +1,6 @@
 package iterative_deepening_a_star.java.simple;
 
 /**
- * Created by claas on 7/17/2016.
  * Used to perform the Iterative Deepening A* Algorithm to find the shortest path from a start to a target node.
  */
 public class IterativeDeepeningAStar {
