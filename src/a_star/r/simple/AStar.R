@@ -1,11 +1,11 @@
-
-# Finds the shortest distance between two nodes using the A-star (A*) algorithm
-# @param graph an adjacency-matrix-representation of the graph where (x,y) is the weight of the edge or 0 if there is no edge.
-# @param heuristic an estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance
-# @param start the node to start from.
-# @param goal the node we're searching for
-# @return The shortest distance to the goal node. Can be easily modified to return the path.
 a_star <- function(graph, heuristic, start, goal) {
+  #' Finds the shortest distance between two nodes using the A-star (A*) algorithm
+  #' @param graph an adjacency-matrix-representation of the graph where (x,y) is the weight of the edge or 0 if there is no edge.
+  #' @param heuristic an estimation of distance from node x to y that is guaranteed to be lower than the actual distance. E.g. straight-line distance
+  #' @param start the node to start from.
+  #' @param goal the node we're searching for
+  #' @return The shortest distance to the goal node. Can be easily modified to return the path.
+
   # This contains the distances from the start node to all other nodes, initialized with a distance of "Infinity"
   distances = rep(Inf, nrow(graph))
   
