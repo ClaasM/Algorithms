@@ -35,7 +35,7 @@ a_star <- function(graph, heuristic, start, goal) {
     }
     if (lowest_priority_index == -1){
       # There was no node not yet visited --> Node not found
-      return -1
+      return (-1)
     } else if (lowest_priority_index == goal){
       # Goal node found
       print("Goal node found!")

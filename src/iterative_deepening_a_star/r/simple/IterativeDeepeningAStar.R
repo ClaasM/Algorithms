@@ -13,7 +13,7 @@ iterative_deepening_a_star <- function(tree, heuristic, start, goal){
     distance = iterative_deepening_a_star_rec(tree, heuristic, start, goal, 0, threshold)
     if(distance == Inf){
       # Node not found and no more nodes to visit
-      return -1
+      return (-1)
     }else if (distance < 0){
       # if we found the node, the function returns the negative distance
       print("Found the node we're looking for!")
