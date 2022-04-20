@@ -20,17 +20,17 @@ def point_in_polygon(polygon, point):
         
         # edge not parallel to x-axis (singularity)
         if polygon[j][1] != polygon[i][1]:
-            if (((polygon[i][1] > point[1]) != (polygon[j][1] > point[1])) and (point[0] < (
-                    (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1])) +
-                                                                                polygon[i][0])):
-                # Invert odd
-                odd = not odd
+            # point between y-coordinates of edge
+            if (polygon[i][1] > point[1]) != (polygon[j][1] > point[1]):
+                if (point[0] < (
+                        (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1])) +
+                                                                                    polygon[i][0]):
+                    # Invert odd
+                    odd = not odd
         j = i
     # If the number of crossings was odd, the point is in the polygon
     return odd
 
-    #         # point between y-coordinates of edge
-    #         if (polygon[i][1] > point[1]) != (polygon[j][1] > point[1]):
     #             # x-coordinate of intersection
     #             Qx = (polygon[j][0]-polygon[i][0])*(point[1]-polygon[i][1])/(polygon[j][1]-polygon[i][1]) + polygon[i][0]
     #             if point[0] < Qx:       # point left of edge
