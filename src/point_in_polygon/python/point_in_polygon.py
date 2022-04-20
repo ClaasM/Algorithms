@@ -22,16 +22,11 @@ def point_in_polygon(polygon, point):
         if polygon[j][1] != polygon[i][1]:
             # point between y-coordinates of edge
             if (polygon[i][1] > point[1]) != (polygon[j][1] > point[1]):
-                if (point[0] < (
-                        (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1])) +
-                                                                                    polygon[i][0]):
+                # x-coordinate of intersection
+                Qx = (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1]) + polygon[i][0]
+                if point[0] < Qx:
                     # Invert odd
                     odd = not odd
         j = i
     # If the number of crossings was odd, the point is in the polygon
     return odd
-
-    #             # x-coordinate of intersection
-    #             Qx = (polygon[j][0]-polygon[i][0])*(point[1]-polygon[i][1])/(polygon[j][1]-polygon[i][1]) + polygon[i][0]
-    #             if point[0] < Qx:       # point left of edge
-    #                 odd = not odd       # line crosses edge
