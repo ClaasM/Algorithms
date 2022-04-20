@@ -18,16 +18,17 @@ def point_in_polygon(polygon, point):
         # One point needs to be above, one below our y coordinate
         # ...and the edge doesn't cross our Y corrdinate before our x coordinate (but between our x coordinate and infinity)
         
-        if (((polygon[i][1] > point[1]) != (polygon[j][1] > point[1])) and (point[0] < (
-                (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1])) +
-                                                                            polygon[i][0])):
-            # Invert odd
-            odd = not odd
+        # edge not parallel to x-axis (singularity)
+        if polygon[j][1] != polygon[i][1]:
+            if (((polygon[i][1] > point[1]) != (polygon[j][1] > point[1])) and (point[0] < (
+                    (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1])) +
+                                                                                polygon[i][0])):
+                # Invert odd
+                odd = not odd
         j = i
     # If the number of crossings was odd, the point is in the polygon
     return odd
 
-    #     if polygon[j][1] != polygon[i][1]: # edge not parallel to x-axis (singularity)
     #         # point between y-coordinates of edge
     #         if (polygon[i][1] > point[1]) != (polygon[j][1] > point[1]):
     #             # x-coordinate of intersection
