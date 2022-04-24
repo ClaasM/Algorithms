@@ -12,19 +12,21 @@ def point_in_polygon(polygon, point):
     # A point is in a polygon if a line from the point to infinity crosses the polygon an odd number of times
     odd = False
     # For each edge (In this case for each point of the polygon and the previous one)
-    i = 0
     j = len(polygon) - 1
-    while i < len(polygon) - 1:
-        i = i + 1
+    for i in range(1,len(polygon)):
         # If a line from the point into infinity crosses this edge
         # One point needs to be above, one below our y coordinate
         # ...and the edge doesn't cross our Y corrdinate before our x coordinate (but between our x coordinate and infinity)
-
-        if (((polygon[i][1] > point[1]) != (polygon[j][1] > point[1])) and (point[0] < (
-                (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1])) +
-                                                                            polygon[i][0])):
-            # Invert odd
-            odd = not odd
+        
+        # edge not parallel to x-axis (singularity)
+        if polygon[j][1] != polygon[i][1]:
+            # point between y-coordinates of edge
+            if (polygon[i][1] > point[1]) != (polygon[j][1] > point[1]):
+                # x-coordinate of intersection
+                Qx = (polygon[j][0] - polygon[i][0]) * (point[1] - polygon[i][1]) / (polygon[j][1] - polygon[i][1]) + polygon[i][0]
+                if point[0] < Qx:
+                    # Invert odd
+                    odd = not odd
         j = i
     # If the number of crossings was odd, the point is in the polygon
     return odd
